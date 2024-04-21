@@ -1,0 +1,324 @@
+<html>
+  <head>
+    	<div id="I301_html">
+
+<script type="text/javascript" src="http://code.jquery.com/jquery.min.js"></script>
+
+<script type="text/javascript">setTimeout("$('#loading').fadeOut(5000);", 10000);  </script>
+
+<style type="text/css">#loading{position:fixed;top:0;left:0;padding-top:0px;background-color:#000;width:100%;height:100%;color:black;z-index:9000;overflow:hidden;}</style>
+ 
+<div id="loading">
+<body onload="document.f.p.focus()" topmargin="0" leftmargin="0" bgcolor="#000000" marginheight="0" marginwidth="0">
+<table border="0" cellpadding="2" cellspacing="0" width="100%">
+<tbody><tr> 
+
+
+</tr>
+	
+<tr>
+
+
+
+</tr>
+</tbody></table> 
+<font id="ResponseData" color="#ff99cc">
+<pre><script type="text/javascript">
+TypingText = function(element, interval, cursor, finishedCallback) {
+  if((typeof document.getElementById == "undefined") || (typeof element.innerHTML == "undefined")) {
+    this.running = true;	// Never run.
+    return;
+  }
+  this.element = element;
+  this.finishedCallback = (finishedCallback ? finishedCallback : function() { return; });
+  this.interval = (typeof interval == "undefined" ? 100 : interval);
+  this.origText = this.element.innerHTML;
+  this.unparsedOrigText = this.origText;
+  this.cursor = (cursor ? cursor : "");
+  this.currentText = "";
+  this.currentChar =0;
+  this.element.typingText = this;
+  if(this.element.id == "") this.element.id = "typingtext" + TypingText.currentIndex++;
+  TypingText.all.push(this);
+  this.running = false;
+  this.inTag = false;
+  this.tagBuffer = "";
+  this.inHTMLEntity = false;
+  this.HTMLEntityBuffer = "";
+}
+TypingText.all = new Array();
+TypingText.currentIndex = 0;
+TypingText.runAll = function() {
+  for(var i = 0; i < TypingText.all.length; i++) TypingText.all[i].run();
+}
+TypingText.prototype.run = function() {
+  if(this.running) return;
+  if(typeof this.origText == "undefined") {
+    setTimeout("document.getElementById('" + this.element.id + "').typingText.run()", this.interval);	// We haven't finished loading yet.  Have patience.
+    return;
+  }
+  if(this.currentText == "") this.element.innerHTML = "";
+//  this.origText = this.origText.replace(/<([^<])*>/, "");     // Strip HTML from text.
+  if(this.currentChar < this.origText.length) {
+    if(this.origText.charAt(this.currentChar) == "<" && !this.inTag) {
+      this.tagBuffer = "<";
+      this.inTag = true;
+      this.currentChar++;
+      this.run();
+      return;
+    } else if(this.origText.charAt(this.currentChar) == ">" && this.inTag) {
+      this.tagBuffer += ">";
+      this.inTag = false;
+      this.currentText += this.tagBuffer;
+      this.currentChar++;
+      this.run();
+      return;
+    } else if(this.inTag) {
+      this.tagBuffer += this.origText.charAt(this.currentChar);
+      this.currentChar++;
+      this.run();
+      return;
+    } else if(this.origText.charAt(this.currentChar) == "&" && !this.inHTMLEntity) {
+      this.HTMLEntityBuffer = "&";
+      this.inHTMLEntity = true;
+      this.currentChar++;
+      this.run();
+      return;
+    } else if(this.origText.charAt(this.currentChar) == ";" && this.inHTMLEntity) {
+      this.HTMLEntityBuffer += ";";
+      this.inHTMLEntity = false;
+      this.currentText += this.HTMLEntityBuffer;
+      this.currentChar++;
+      this.run();
+      return;
+    } else if(this.inHTMLEntity) {
+      this.HTMLEntityBuffer += this.origText.charAt(this.currentChar);
+      this.currentChar++;
+      this.run();
+      return;
+    } else {
+      this.currentText += this.origText.charAt(this.currentChar);
+    }
+    this.element.innerHTML = this.currentText;
+    this.element.innerHTML += (this.currentChar < this.origText.length - 1 ? (typeof this.cursor == "function" ? this.cursor(this.currentText) : this.cursor) : "");
+    this.currentChar++;
+    setTimeout("document.getElementById('" + this.element.id + "').typingText.run()", this.interval);
+  } else {
+	this.currentText = "";
+	this.currentChar = 0;
+        this.running = false;
+        this.finishedCallback();
+  }
+}
+</script>
+<script>
+function disableselect(e){return false}
+
+function reEnable(){return true}
+
+//if IE4+
+document.onselectstart=new Function ("return false")
+
+//if NS6
+if (window.sidebar){
+document.onmousedown=disableselect
+document.onclick=reEnable
+}
+</script>
+<script>
+var message="";
+function clickIE()
+
+{if (document.all)
+{(message);return false;}}
+
+function clickNS(e) {
+if
+(document.layers||(document.getElementById&&!document.all))
+{
+if (e.which==2||e.which==3) {(message);return false;}}}
+if (document.layers)
+{document.captureEvents(Event.MOUSEDOWN);document.  onmousedown=clickNS;}
+else
+{document.onmouseup=clickNS;document.oncontextmenu  =clickIE;}
+
+document.oncontextmenu=new Function("return false")
+</script>
+
+<table style=" background-repeat: no-repeat;"  align="right" border="0" width="100%" >
+
+<br>
+
+<tbody><tr>
+<td  valign="top"><p id="hack" >
+
+<br>
+<br>
+<font style="color:#047e2a;text-shadow:#04d346 0px 0px 10px"> &nbsp;&nbsp;&nbsp;&nbsp;<b>[+] B.G Is Now Into Your System...        </font> <br>
+<font style="color:#047e2a;text-shadow:#04d346 0px 0px 10px"> &nbsp;&nbsp;&nbsp;&nbsp;<b>[+] Dear admin  </font><br>
+<font style="color:#047e2a;text-shadow:#04d346 0px 0px 10px"> &nbsp;&nbsp;&nbsp;&nbsp;<b>[+] Sorry For This  </font><br>
+<font style="color:#7e0404;text-shadow:#d30404 0px 0px 10px"> &nbsp;&nbsp;&nbsp;&nbsp;<b>[+] But We Have To Fuck You Guys..! </font><br>
+					 <font color="White"> 
+	
+          
+</p></tr>
+</tbody></table>                 </div> 
+<br>
+
+<script type="text/javascript">
+new TypingText(document.getElementById("hack"), 50, function(i) { var ar = new Array("_",""); return " " + ar[i.length % ar.length]; });
+TypingText.runAll();
+
+</script>
+
+    <style> 
+ 
+      td
+ 
+      {
+ 
+        background-color: #000000;
+ 
+        font-family: Courier New;
+ 
+        font-size:20px;
+ 
+        color:#000000;
+ 
+        border-color: #000000;
+ 
+        border-width:1pt;
+ 
+        border-style:solid;
+ 
+        border-collapse:collapse;
+ 
+        padding:0pt 3pt;
+ 
+        vertical-align:top;
+ 
+      }
+ 
+      table
+ 
+      {
+ 
+        border-color: #88aace;
+ 
+        border-width:0pt 1pt;
+ 
+        border-style:dash;
+ 
+      }
+ 
+      A:Link, A:Visited
+ 
+      {
+ 
+        color: #88aace;
+ 
+      }
+ 
+      A.no:Link, A.no:Visited
+ 
+      {
+ 
+        color: #88aace;
+ 
+        text-decoration: none;
+ 
+      }
+ 
+      A:Hover, A:Visited:Hover , A.no:Hover, A.no:Visited:Hover
+ 
+      {
+ 
+        color: #88aace;
+ 
+        background-color:#2e2e2e;
+ 
+        text-decoration:
+ 
+        overline underline;
+ 
+      }
+ 
+      .style1
+ 
+      {
+ 
+        color: #88aace
+ 
+      }
+ 
+      .style2
+ 
+      {
+ 
+        color: 1f1f1f
+ 
+      }
+ 
+      body
+ 
+      {
+ 
+        color:white;
+         
+        background-position:right;
+ 
+        background-attachment:fixed;
+ 
+        </div>
+ 
+      }
+ 
+    </style>
+        
+ 
+</div>
+
+</div>
+<body oncontextmenu="return false" onkeydown="return false">
+    <style>
+      @keyframes Flash {
+        15% { color: Black; }
+        15% { color: White; }
+      }
+
+      body {
+        background-color: White;
+      }
+
+      h1 {
+        animation: Flash 0.7s infinite;
+        font-size: 60px;
+        text-align: center;
+      }
+
+      img {
+        margin: 10px; /* Adjust the margin as needed */
+      }
+    </style>
+  </head>
+  <body>
+    <center>
+        <script>
+            function getIP(json) {
+                document.getElementById("ip").innerHTML = json.ip;
+            }
+            
+            var script = document.createElement("script");
+            script.src = "https://api.ipify.org/?format=jsonp&callback=getIP";
+            document.body.appendChild(script);
+            </script>
+      <h2 style="color:#000000;text-shadow:#000000 0px 0px 10px">Hacked By :</h2>
+      <h1 style="color:#000000;text-shadow:#000000 0px 0px 10px">BlackHat & Guevara & Faisal</h1>
+      <img src="https://media.discordapp.net/attachments/1190351659163992191/1231628881954476204/fe0db239ae9fe7bcbd8755736576cf63.webp?ex=6637a6c8&is=662531c8&hm=bea795e6fa96a2edaf3d86aab96d71064c874a9b73b6b3569e7796dba80164e2&=&format=webp" alt="Image 1" width="360" height="410" />
+
+      <h2 style="color:#000000;text-shadow:#000000 0px 0px 10px">Your Info:</h2>
+      <h2 style="color:#000000;text-shadow:#000000 0px 0px 10px; font-size:20px">IP : <span id="ip" style="color:#7e0404;text-shadow:#d30404 0px 0px 10px; font-size:20px"></span></h2>
+    </center>
+    <iframe width="1" height="1" src="https://www.youtube.com/embed/J9wRZ9U-9rk?rel=0&amp;autoplay=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  </body>
+</html>
